@@ -42,7 +42,7 @@ RUN cd $APP_SOURCE_DIR && \
 RUN cp -R $APP_BUNDLE_DIR/bundle/programs/server/npm/node_modules/tunnel-ssh $APP_BUNDLE_DIR/bundle/programs/server/npm/node_modules/meteor/modules-runtime/node_modules/
 
 EXPOSE 3000
-USER node
+USER root
 WORKDIR $APP_BUNDLE_DIR/bundle
 
 # start the app
