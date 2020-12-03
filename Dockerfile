@@ -46,6 +46,7 @@ USER root
 WORKDIR $APP_BUNDLE_DIR/bundle
 
 # start the app
+RUN chgrp -R 0 . && chmod -R g=u . 
 RUN ["chmod","+x","./entrypoint.sh"]
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["node", "main.js"]
